@@ -1,1082 +1,357 @@
-<!DOCTYPE HTML>
-<html lang="en">
-
-  <!-- Preloader -->
-  <div id="preloader" class="preloader" data-delay="0" data-limit="3000">
-    <img src="assets/images/logo.png" class="emblem" alt="Emblem" hidden="hidden" />
-  </div>
-
-  <head>
-
-    <!-- Display -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-    <!-- Identity -->
-    <title>Splentia</title>
-    <meta name="description" content="Splentia is a creative multipurpose theme for building websites. It is based on Bootstrap 5 and other of the best and most up-to-date code libraries used by professional developers in the world.">
-    <meta name="author" content="Codings">
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-  
-    <!-- Vendor CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/preloader.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/font-family.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />  
-    <link rel="stylesheet" href="assets/css/vendor/menu-engine.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/menu-grid.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/swiper.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/dynamic-slider.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/bricklayer.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/lightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/aos.min.css" />
-    <!-- Cookies CSS -->
-    <link href="src/themes/cookiesconsent.theme-dark.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/cookiesconsent.min.css" />
-  
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/theme.css" />
-    <link rel="stylesheet" href="assets/css/core.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          darkMode: "class",
-        }
-      </script><link rel="stylesheet" href="assets/css/main.css">
-
-
-<style>
-  .button {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-
-  .floating-container {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  bottom: 0;
-  right: 0;
-  margin: 35px 25px;
-}
-.floating-container:hover {
-  height: 300px;
-}
-.floating-container:hover .floating-button {
-  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
-  -webkit-transform: translatey(5px);
-          transform: translatey(5px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.floating-container:hover .element-container .float-element:nth-child(1) {
-  -webkit-animation: come-in 0.4s forwards 0.2s;
-          animation: come-in 0.4s forwards 0.2s;
-}
-.floating-container:hover .element-container .float-element:nth-child(2) {
-  -webkit-animation: come-in 0.4s forwards 0.4s;
-          animation: come-in 0.4s forwards 0.4s;
-}
-.floating-container:hover .element-container .float-element:nth-child(3) {
-  -webkit-animation: come-in 0.4s forwards 0.6s;
-          animation: come-in 0.4s forwards 0.6s;
-}
-.floating-container .floating-button {
-  position: absolute;
-  width: 65px;
-  height: 65px;
-  background: #2cb3f0;
-  bottom: 0;
-  border-radius: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  color: white;
-  line-height: 65px;
-  text-align: center;
-  font-size: 23px;
-  z-index: 100;
-  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.floating-container .float-element {
-  position: relative;
-  display: block;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin: 15px auto;
-  color: white;
-  font-weight: 500;
-  text-align: center;
-  line-height: 50px;
-  z-index: 0;
-  opacity: 0;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-}
-.floating-container .float-element .material-icons {
-  vertical-align: middle;
-  font-size: 16px;
-}
-.floating-container .float-element:nth-child(1) {
-  background: #42A5F5;
-  box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
-}
-.floating-container .float-element:nth-child(2) {
-  background: #4CAF50;
-  box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
-}
-.floating-container .float-element:nth-child(3) {
-  background: #FF9800;
-  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
-}
-
-
-  </style>
-  
-  </head>
-
-  <body class="Splentia-body">
-
-    <!-- Header -->
-    <header id="header" class="Splentia-header">
-      <!-- Navbar -->
-      <nav id="navbar" class="navbar navbar-expand-lg has-top-bar fixed-scroll hover-line-left scheme-3 tertiary">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">    
-            <!-- Navbar-top -->
-            <div class="navbar-top-wrapper">
-              <div class="container">
-              
-              </div>
-            </div>
-            <div class="navbar-divider horizontal-line-animate"></div>    
-            <!-- Navbar-bottom -->
-            <div class="navbar-bottom-wrapper fixed-scroll">
-              <div class="container">
-                <div class="navbar-bottom">
-                  <!-- Brand -->
-                  <a class="navbar-brand" href="/">
-                    <!-- <div class="site-title">Site Title</div> -->
-                    <img src="assets/images/logo.png" alt="Splentia Theme" class="logo main-logo" />
-                    <img src="assets/images/logo.png" alt="Splentia Theme" class="logo sticky-logo" />
-                    <img src="assets/images/logo.png" alt="Splentia Theme" class="logo mobile-logo" />
-                    <span class="logo-after-text">Splentia</span>
-                  </a>
-                  <!-- Responsive menu toggle -->
-              
-                  <!-- Navbar links -->
-                  <div id="navbar-items" class="collapse navbar-collapse focus-trigger">
-          
-                    <!-- Link -->
-                    <ul class="navbar-nav ms-auto">
-
-                      <li class="nav-item dropdown has-megamenu hover">
-                        <a class="nav-link dropdown-toggle has-icon" href="#" data-bs-toggle="dropdown">
-                          <span class="text">Portfolio</span><img class="image-icon dropdown-icon" src="assets/svg/chevron-down-outline.svg" alt="Icon name" data-Splentia-icon="32" />
-                        </a>
-                        <div class="dropdown-menu megamenu animate fade-down" role="menu">
-                    
-                    
-                      </li>
-
-                     
-                      <li class="nav-item dropdown has-megamenu hover">
-                        <a class="nav-link dropdown-toggle has-icon" href="#" data-bs-toggle="dropdown">
-                          <span class="text">Portfolio</span><img class="image-icon dropdown-icon" src="assets/svg/chevron-down-outline.svg" alt="Icon name" data-Splentia-icon="32" />
-                        </a>
-                        <div class="dropdown-menu megamenu animate fade-down" role="menu">
-                    
-                    
-                      </li>
-
-                      <li class="nav-item dropdown has-megamenu hover">
-                        <a class="nav-link dropdown-toggle has-icon" href="#" data-bs-toggle="dropdown">
-                          <span class="text">Portfolio</span><img class="image-icon dropdown-icon" src="assets/svg/chevron-down-outline.svg" alt="Icon name" data-Splentia-icon="32" />
-                        </a>
-                        <div class="dropdown-menu megamenu animate fade-down" role="menu">
-                    
-                    
-                      </li>
-
-
-                      <li class="nav-item dropdown has-megamenu hover">
-                        <a class="nav-link dropdown-toggle has-icon" href="#" data-bs-toggle="dropdown">
-                          <span class="text">Blog</span><img class="image-icon dropdown-icon" src="assets/svg/chevron-down-outline.svg" alt="Icon name" data-Splentia-icon="32" />
-                        </a>
-                        <div class="dropdown-menu megamenu animate fade-down" role="menu">
-                    
-                    
-                      </li>
-
-
-
-                   
-                    </ul>
-                    <ul class="navbar-nav navbar-icons">
-                      <!-- Cart icon -->
-                  
-                 
-                    </ul>
-                    <!-- Action -->
-                  <div class="navbar-action">        
-                    <div class="nav-item">
-                      <a href="https://codings.dev/?buy=Splentia-html" target="_blank" class="button small-button outline rounded tertiary-25 tertiary-hover magnetic-effect">
-                        <span class="button-text tertiary white-hover">Contact</span>
-                      </a>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav> 
-    </header>
-    
-    <!-- Main -->
-    <main id="main" class="Splentia-main bg-color black">
-
-
-       <!-- Banner -->
-       <!-- Banner -->
-       <section class="Splentia-section has-overlay">
-        <div class="banner">
-          <div class="content-wrapper text-center">
-            <!-- Intro -->
-            <div class="basic-intro mb-35">
-              <h2 class="title text-style-5">
-                <span class="text-1 text-outline white-75"> </span>
-                <span class="text-2 d-block text-style-3 text-italic white-85">Creatividad Avanzada<br>
-                  con IA.</span>
-              </h2>
-              <div class="description white">
-                <h3>Splentia es una agencia de IA generativa, que ayuda a marcas y negocios <br>a propulsarse
-                  en esta nueva era del marketing y la creatividad.</h3>
-              </div>
-         
-            </div>
-            <!-- Button -->
-       
-          </div>
-          <!-- Video -->
-          <div class="image-wrapper">
-            <video class="video vh-75 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-              <source src="assets/videos/video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Overlay -->
-         
-          <div class="overlay black-75"></div>
-        </div>
-      </section>
-
-
-
-
-
-
-      <!-- Banner -->
-      <section class="Splentia-section has-holder pt-4">
-        <div class="container max-w-75">
-          <!-- Intro -->
-          <div class="basic-intro text-center">
-            <h1 class="title">
-              <span class="text-1 d-block text-style-2 text-outline gray">Splentia</span>
-              <span class="text-2 text-italic white">La forman ,nuestro equipo de <mark class="animated-underline tertiary active">especialistas en IA</mark>.</span>
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <!-- Carousel -->
-      <section class="Splentia-section pt-6 pb-6">
-        <div class="container">
-          <!-- Carousel -->
-          <div class="gallery swiper slider stretched has-gap has-side-gaps has-pagination scheme-2 tertiary-50" data-columns="3,2,1,1">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-            
-                  <div class="image-wrapper small-shadow rounded-3">
-                    <img src="assets/images/equipo.avif" class="image vh-50 fit-cover" alt="This is an example description for this item." />
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <!-- Video -->
-                <a href="https://vimeo.com/222990241" class="item active lightbox-link hover-zoom">
-                  <i class="fa-solid fa-circle-play gallery-icon white"></i>
-                  <div class="image-wrapper small-shadow rounded-3">
-                    <img src="assets/images/jpg/02.png" class="image vh-50 fit-cover" alt="This is an example description for this item." />
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="assets/images/jpg/01.png" class="item lightbox-link hover-zoom">
-                  <div class="image-wrapper small-shadow rounded-3">
-                    <img src="assets/images/jpg/03.png" class="image vh-50 fit-cover" alt="This is an example description for this item." />
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="assets/images/jpg/02.png" class="item lightbox-link hover-zoom">
-                  <div class="image-wrapper small-shadow rounded-3">
-                    <img src="assets/images/jpg/03.png" class="image vh-50 fit-cover" alt="This is an example description for this item." />
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <!-- Video -->
-                <a href="https://vimeo.com/222990241" class="item active lightbox-link hover-zoom">
-                  <i class="fa-solid fa-circle-play gallery-icon white"></i>
-                  <div class="image-wrapper small-shadow rounded-3">
-                    <img src="assets/images/jpg/03.png" class="image vh-50 fit-cover" alt="This is an example description for this item." />
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="assets/images/jpg/01.png" class="item lightbox-link hover-zoom">
-                  <div class="image-wrapper small-shadow rounded-3">
-                    <img src="assets/images/jpg/02.png" class="image vh-50 fit-cover" alt="This is an example description for this item." />
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-side-gaps-prev black"></div>
-            <div class="swiper-side-gaps-next black"></div>
-          </div>
-        </div>
-
-
-        
-     
-      </section>
-
-   
-      <div class="container max-w-75">
-        <!-- Intro -->
-        <div class="basic-intro text-center">
-          <h5>
-          
-            <div class="description white-50">
-              <p>¡Bienvenidos a nuestra web! Somos un equipo de expertos apasionados por la inteligencia artificial generativa y el diseño gráfico. Nuestro talento abarca desde la creación de soluciones innovadoras basadas en IA hasta la perfección del arte visual a través del retoque de imágenes.</p>
-              <p>Junto a nuestros expertos en IA, nuestros diseñadores gráficos y retocadores trabajan meticulosamente para asegurar que cada proyecto visual no solo cumpla, sino supere, las expectativas. Con una atención obsesiva a los detalles y una comprensión profunda de la estética visual, nuestros diseñadores transforman conceptos en obras de arte impactantes y nuestros retocadores garantizan la perfección en cada imagen, cuidando cada pixel para lograr resultados impecables.</p>
-            </div>
-          </h5>
-        </div>
-      </div>
-      
-      <br> <br>
-
-        <!-- Banner -->
-        <section class="Splentia-section has-overlay">
-          <div class="banner">
-            <div class="content-wrapper text-center">
-              <!-- Intro -->
-              <div class="basic-intro mb-35">
-                <h2 class="title text-style-5">
-                  <span class="text-1 text-outline white-75"> </span>
-                  <span class="text-2 text-italic white">Sobre nuestra <mark class="animated-underline tertiary">Historia</mark>.</span>
-                </h2>
-                <div class="description white-50">
-                  <p>Desde nuestros inicios,nos dedicamos al diseño gráfico y de moda. Hemos crecido ofreciendo diseño y retoque fotográfico para moda y diseño, agregando valor a nuestra trayectoria</p>
-                
-                </div>
-              </div>
-              <!-- Button -->
-         
-            </div>
-            <!-- Video -->
-            <div class="image-wrapper">
-              <video class="video vh-75 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="assets/videos/2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <!-- Overlay -->
-            <div class="overlay black-50"></div>
-          </div>
-        </section>
-
-
-
-    <!-- Carousel -->
-  
-
-
-    
-
-      <!-- Portfolio scrolling -->
-      <section class="Splentia-section pt-5 pb-3">
-        <div class="container">
-          <!-- Intro -->
-          <div class="extended-intro max-w-85">
-            <div class="wrapper">
-              <div class="left-column">
-                <h2 class="title">
-                  <span class="text-1 text-style-2 text-outline text-gradient scheme-2" data-text-color="#1e1e24">Creamamos experiencias </span>
-                  <span class="text-2 text-style-3 text-italic text-gradient scheme-2">visuales que cautivan.</span>
-                </h2>
-                <div class="description text-style-12 gray">
-                  <p>Para forjar un vínculo sólido entre la marca y su audiencia clave, es fundamental considerar meticulosamente el estilo y la personalidad de cada influencer que llevará adelante el mensaje, creando así una conexión subconsciente poderosa..</p>
-                </div>
-              </div>
-              <div class="right-column">
-                <!-- Button -->
-             
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio -->
-          <section class="Splentia-section has-overlay">
-            <div class="banner">
-              <div class="content-wrapper text-center">
-                <!-- Intro -->
-                <div class="basic-intro max-w-75 text-center">
-              
-              
-           
-    
-   
- 
-    
-                
-              
-                 
-                </div>
-              </div>
-              <!-- Video -->
-              <div class="image-wrapper">
-                <video class="video vh-100 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                  <source src="assets/videos/video2.mp4" type="video/webm">
-                </video>
-              </div>
-              <!-- Overlay -->
-           
-            </div>
-          </section>
-        </div>
-      </section>
-
-
-
-    <!-- Banner -->
-    <section class="Splentia-section has-holder pt-4 pb-4">
-      <div class="container max-w-75">
-        <!-- Intro -->
-        <div class="basic-intro text-center">
-          <h2 class="text text-style-1 text-outline gray-75" data-lax="h-left" style="transform: translate3d(-76px, 1e-05px, 1e-05px);">We love 💖 our work</h2>
-          <h1 class="title">
-            <span class="text-1 d-block text-style-2 text-outline gray-75">How we work ...💻 </span>
-            
-            <span class="text-2 d-block text-style-3 text-italic white">The ia strategy defined by humans.</span>
-          </h1>
-        </div>
-      </div>
-    </section>
-
-
-
-      <!-- Vertical tab -->
-      <section class="Splentia-section pt-4 pb-4">
-        <div class="container">
-          <div class="vertical-tab scheme-2 primary">
-            <!-- Tab navigation -->
-            <ul id="v-tab" class="nav nav-pills" role="tablist" aria-orientation="vertical">
-              <li class="nav-item" role="presentation">
-                <button id="v-1-tab" class="nav-link active" aria-selected="true" aria-controls="v-1" data-bs-target="#v-1" data-bs-toggle="tab" role="tab">
-                  About Our Services <picture>
-                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9be/512.webp" type="image/webp">
-                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9be/512.gif" alt="🦾" width="42" height="42">
-                  </picture>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button id="v-2-tab" class="nav-link" aria-selected="false" aria-controls="v-2" data-bs-target="#v-2" data-bs-toggle="tab" role="tab">
-                  Trusted Brands <picture>
-                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2728/512.webp" type="image/webp">
-                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2728/512.gif" alt="✨" width="42" height="42">
-                  </picture>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button id="v-3-tab" class="nav-link parent" aria-selected="false" aria-controls="v-3" data-bs-target="#v-3" data-bs-toggle="tab" role="tab">
-                  Why Choose Us? <picture>
-                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f61c/512.webp" type="image/webp">
-                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f61c/512.gif" alt="😜" width="42" height="42">
-                  </picture>
-                </button>
-                
-              </li>
-              <li class="nav-item" role="presentation">
-                <button id="v-4-tab" class="nav-link" aria-selected="false" aria-controls="v-3" data-bs-target="#v-4" data-bs-toggle="tab" role="tab">
-                  Detailed Process <picture>
-                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2615/512.webp" type="image/webp">
-                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2615/512.gif" alt="☕" width="42" height="42">
-                  </picture>
-                </button>
-              </li>
-            </ul>
-            <!-- Tab content -->
-            <div class="tab-content">      
-              <div id="v-1" class="tab-pane fade show active" role="tabpanel">
-                <p>En nuestro quehacer, nos enfocamos en prototipar productos creativos, destacando la innovación y la disponibilidad de recursos. Utilizamos las mejores tecnologías disponibles en el mercado para asegurar que nuestros clientes obtengan resultados positivos.</p>
-                <hr class="white-10">
-            
-              </div>      
-              <div id="v-2" class="tab-pane fade" role="tabpanel">
-                <p>We keep in mind that we always need to <mark class="animated-underline primary-50 text-white">improve everything</mark> we do, aiming to help people with our products, in which we insist on guarantee quality and good service as a priority.</p>
-                <hr class="white-10">
-                <!-- Carousel -->
-            
-              </div>      
-              <div id="v-3" class="tab-pane fade" role="tabpanel">
-                <p>Our vision is to have our product recognized as the main player in the market and become a reference for other people and companies that intend to venture into the segment.</p>
-                <hr class="white-10">
-                <!-- Counter -->
-            
-              </div>  
-              <div id="v-4" class="tab-pane fade" role="tabpanel">
-                <p>Researching our successful  <mark class="animated-underline primary-50 text-white">creative projects</mark> has helped keep us excited to innovate even more.</p>
-
-
-                <!-- Table -->
-                <div class="table-responsive">
-                  <table class="table scheme-2">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="white">#</th>
-                        <th scope="col" class="white">Phases</th>
-                        <th scope="col" class="white">Follow-up</th>
-                        <th scope="col" class="white">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" class="white">1</th>
-                        <td>Prototyping</td>
-                        <td>With the client</td>
-                        <td>From 1 to 2 days</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="white">2</th>
-                        <td>Development</td>
-                        <td>Technology team</td>
-                        <td>From 1 to 5 days</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="white">3</th>
-                        <td>Validation</td>
-                        <td>Management team</td>
-                        <td>Project ready</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      
-
-
-
-
-
-
-
-      <section class="Splentia-section has-overlay">
-        <div class="banner">
-          <div class="content-wrapper text-center">
-            <!-- Intro -->
-            <div class="basic-intro max-w-75 text-center">
-              <h1 class="title text-style-3 white">
-                <span class="text-1">We</span>
-                <span class="text-2 text-outline"> dance <mark class="animated-underline tertiary active">in the IA era</mark>.</span>
-              </h1>
-              <div class="description text-style-12 white-50">
-                <h2 class="title">
-                  <span class="text-1 text-style-3 text-gradient scheme-1">
-                    Impulsamos a nuestros clientes a liderar y destacarse, utilizando las mejores tecnologías de IA disponibles.
-
-</span>
-                 
-                </h2>
-              </div>
-              <!-- Button -->
-              <canvas id="confetti"></canvas>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-<script src="script.js"></script>
-
-            
-          
-             
-            </div>
-          </div>
-          <!-- Video -->
-          <div class="image-wrapper">
-            <video class="video vh-100 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-              <source src="assets/videos/6.webm" type="video/webm">
-            </video>
-          </div>
-          <!-- Overlay -->
-          <div class="overlay black-65"></div>
-        </div>
-      </section>
-
-
-
-
-        <!-- Banner -->
-       
-  
-        <!-- Banner -->
-        <section class="Splentia-section has-overlay bg-image bg-fixed" data-bg-image="assets/images/jpg/01.png">
-          <div class="container max-w-75">
-            <div class="holder vh-75 align-v-center">
-              <!-- Intro -->
-              <div class="extended-intro">
-                <div class="wrapper">
-                  <div class="left-column">
-                    <h2 class="title">
-                      <span class="text-1 text-style-3 text-gradient scheme-1">
-                        Potenciando marcas y clientes a través de las Tecnologías de IA Generativa.</span>
-                     
-                    </h2>
-                    <div class="description text-style-12 black">
-                      <p>Impulsamos a nuestros clientes a liderar y destacarse, utilizando las mejores tecnologías de IA disponibles.</p>
-                    </div>                  
-                  </div>
-                  <div class="right-column">
-                    <!-- Button -->
-              
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Overlay -->
-          <div class="overlay white-75"></div>
-        </section>
-
-
-
-
-        
-       <!-- Pricing table -->
-    
-      <a name="abajo"></a>
-      <!-- Form -->
-      <section class="Splentia-section has-overlay pt-5 pb-5 bg-image bg-fixed" data-bg-image="assets/images/png/videoframe_11925.png">
-        
-        <div class="container max-w-85" >
-             
-              <!-- Intro -->
-              <div class="basic-intro text-center">
-                <h2 class="title text-style-5">
-                  <span class="text-1 text-outline white-75">Lets Talk 😀</span>
-                  
-                  <span class="text-2 text-italic white"><mark class="animated-underline tertiary">hola@splentia.com</mark> </span>
-                  
-                </h2>
-                <div class="description gray">
-                  <p>Envianos un email y charlemos sobre como podemos ayudarte.<br>Estamos deseando conocer sobre tu proyecto.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 align-h-center align-v-center"> 
-              <!-- Form -->
-           
-            </div>
-          </div>
-        </div>
-        <!-- Overlay -->
-        <div class="overlay black-75"></div>
-      </section>
-
-      
-
-    </main>
-
-    <!-- Vertical Lines -->
-    <div class="vertical-lines diagonal scheme-2 tertiary">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 align-h-center">
-          <span class="line"></span>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 align-h-center">
-          <span class="line"></span>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 align-h-center">
-          <span class="line"></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Side Widget -->
-    <div class="side-widget to-left invert-color mix-blend-difference d-only-desktop">
-      <div class="item">
-        <span class="widget label-icons">
-          <a href="#your-link" class="link black black-hover"><i class="icon fab fa-instagram-am"></i></a>
-          <a href="#your-link" class="link black black-hover"><i class="icon fab fa-twitter"></i></a>
-          <a href="#your-link" class="link black black-hover"><i class="icon fab fa-linkedin-in"></i></a>
-          <span class="label-line black"></span>
-        </span>
-      </div>
-    </div>
-
-    <!-- Scroll to Top -->
-    <div class="side-widget to-right invert-color mix-blend-difference">
-      <div class="item align-v-bottom">
-        <a href="#" class="link hover-up">
-          <span class="widget float-icon">
-            <i class="fa-solid fa-arrow-up-long icon"></i>
-          </span>
-        </a>
-      </div>
-    </div>
-
-
-
-
-
-
-        <!-- Pricing table -->
-        <section class="Splentia-section pt-6 pb-6 bg-color black js-switch-price">
-          <div class="container">
-            <!-- Intro -->
-            <div class="basic-intro mb-35 text-center">
-              <picture>
-                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp" type="image/webp">
-                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" width="90" height="90">
-              </picture>
-              <h2 class="title text-style-5">
-               <span class="text-1 text-outline white-75">We are ready </span>
-               <span class="text-1 text-outline white-75">for launch your IA project !</span>
-              
-              </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
-
-
-
-     <!-- Banner -->
-     <section class="Splentia-section has-overlay">
-      <div class="banner">
-        <div class="content-wrapper text-center">
-          <!-- Intro -->
-          <div class="basic-intro mb-35">
-            <h2 class="title text-style-5">
-              <span class="text-1 text-outline white-75">We are </span>
-              <span class="text-2 text-italic white"> <mark class="animated-underline tertiary">in Barcelona</mark>.</span><br>
-              <span class="text-2 text-italic white"> hola@splentia.com</span>
-            </h2>
-          
-          </div>
-
-          
-          <!-- Button -->
-       
-        </div>
-        <!-- Video -->
-        <div class="image-wrapper">
-          <video class="video vh-75 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="assets/videos/bigcity.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!-- Overlay -->
-        <div class="overlay black-50"></div>
-      </div>
-    </section>
-
-
-
-    <!-- Search Bar Offcanvas -->
-    <div id="Splentia-search-bar" class="search-bar offcanvas offcanvas-top scheme-3 tertiary" tabindex="-1" aria-hidden="true" aria-modal="true" role="dialog">
-      <div class="offcanvas-dialog">
-        <div class="offcanvas-content">
-          <div class="megamenu w-100">
-            <div class="container">
-              <div class="section-inner-expanded fit-over-scrollbar">
-                <i class="fa-solid fa-xmark close-button black tertiary-hover" data-bs-dismiss="offcanvas" aria-label="Close"></i>
-                <div class="row g-3">
-                  <!-- Search Tags -->
-                  <div class="col-12 col-md-6">
-                    <div class="megamenu-item">
-                      <h6 class="title">Popular searches</h6>
-                      <!-- Tag Cloud -->
-                      <div class="tag-cloud">
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Environment</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline active gray-50 tertiary-hover floating-item-smooth">
-                            <span class="badge-text gray white-hover">Events</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Technology</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Web</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Mobile</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Design</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Branding</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Development</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Artificial</span>
-                          </span>
-                        </a>
-                        <a href="#your-link" class="link">                      
-                          <span class="badge outline gray-50 tertiary-hover">
-                            <span class="badge-text gray white-hover">Intelligence</span>
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Search Form -->
-                  <div class="col-12 col-md-6">
-                    <div class="megamenu-item">
-                      <h6 class="title"><mark class="animated-underline tertiary-25">What are you looking for?</mark></h6>
-                      <!-- Form -->
-                      <div class="form-area scheme-1">
-                        <form class="form-fields needs-validation" novalidate="novalidate">
-                          <div class="form-row row has-icon">
-                            <div class="form-col form-floating">
-                              <button class="button overlay-button"><img class="overlay-image-icon" src="assets/svg/send-outline.svg" alt="Icon name" data-Splentia-icon="32" /></button>
-                              <input id="InputSearchNavbar" class="form-control focus-trigger-field" name="InputSearchNavbar" placeholder="Type keywords..." required="required">
-                              <label for="InputSearchNavbar" class="form-label">Type keywords...</label>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="Splentia-footer scheme-1 tertiary" data-bg-color="#1e1e24">
-      <div class="footer-content focus-trigger">
-        <div class="container">
-          <div class="row g-3">
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="footer-item">
-                <!-- Brand -->
-                <a href="/" class="footer-brand floating-item">
-                  <!-- <div class="site-title">Site Title</div> -->
-                  <img src="assets/images/logo.png" alt="Splentia Theme" class="logo" />
-                  <span class="logo-after-text">Splentia</span>
-                </a>
-                <!-- Text -->
-                <div class="footer-text">
-                  <p>We are the creative Ai Agency behind Splentia.We love explore Generative IA.We love art.We love life.</p>
-                </div>
-              </div>
-       
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="footer-item">
-                <h6 class="title">Links</h6>
-                <!-- Links list -->
-                <ul class="nav-list list-unstyled">
-                  <li class="nav-item">
-                    <a href="Politicadeprivacidad.html" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-Splentia-icon="32" />  
-                      <span class="text">Politica de Privacidad</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="Politicadecookies.html" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-Splentia-icon="32" />  
-                      <span class="text">Politica de Cookies</span>
-              
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="Avisolegal.html" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-Splentia-icon="32" />  
-                      <span class="text">Aviso Legal</span>
-                    </a>
-                  </li>
-            
-                </ul>
-              </div>
-         
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-       
-              <div class="footer-item">
-                <h6 class="title">Follow Us</h6>
-                <!-- Icon list -->
-                <div class="list-wrapper">
-                  <ul class="icon-h-list">
-                    <li class="ms-0 item">
-                      <a href="#your-link" class="link gray tertiary-hover hover-rotate"><i class="icon fab fa-instagram"></i></a>
-                    </li>
-                    <li class="item">
-                      <a href="#your-link" class="link gray tertiary-hover hover-rotate"><i class="icon fab fa-twitter"></i></a>
-                    </li>
-                    <li class="item">
-                      <a href="#your-link" class="link gray tertiary-hover hover-rotate"><i class="icon fab fa-linkedin-in"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="footer-item">
-                <h6 class="title">Contact Us</h6>
-                <!-- Links list -->
-                <ul class="nav-list list-unstyled">
-          
-                  <li class="nav-item">
-                    <a href="mailto:contact@mail.com" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/mail-sharp.svg" alt="Icon name" data-Splentia-icon="32" />  
-                      <span class="text">hola@splentia.com</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-bar" data-bg-color="#000">
-        <div class="text">© 2024 - Splentia.com. Made with 🩷 in Barcelona.</div>
-        <a href="#" id="open_preferences_center" class="button" >
-          <button>Actualizar Opciones Cookies</button>
-        </a>
-      </div>
-    </footer>
-    
-    <!-- Cursor -->
-    <svg class="cursor-effect tertiary" width="120" height="120" viewBox="0 0 220 220">
-    
-      <circle class="cursor-effect-inner" cx="110" cy="110" r="160"></circle>
-    </svg>
-
-    <!-- Vendor JavaScript -->
-   
-    <script src="assets/js/vendor/jquery.min.js"></script>
-    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/vendor/preloader.min.js"></script>
-    <script src="assets/js/vendor/inview.min.js"></script>
-    <script src="assets/js/vendor/menu-engine.min.js"></script>
-    <script src="assets/js/vendor/menu-grid.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/swiper.min.js"></script>
-    <script src="assets/js/vendor/anime.min.js"></script>
-    <script src="assets/js/vendor/dynamic-slider.min.js"></script>
-    <script src="assets/js/vendor/shuffle.min.js"></script>
-    <script src="assets/js/vendor/stickybits.min.js"></script>
-    <script src="assets/js/vendor/bricklayer.min.js"></script>
-    <script src="assets/js/vendor/lightbox.min.js"></script>
-    <script src="assets/js/vendor/typed.min.js"></script>
-    <script src="assets/js/vendor/progressbar.min.js"></script>
-    <script src="assets/js/vendor/map-styles.min.js"></script>
-    <script src="assets/js/vendor/magnetic-effect.min.js"></script>
-    <script src="assets/js/vendor/gsap.min.js"></script>
-    <script src="assets/js/vendor/aos.min.js"></script>
-    <script src="assets/js/vendor/lax.min.js"></script>
-    <script src="assets/js/vendor/cursor-effect.min.js"></script>
-    
-
-    <!-- Main JavaScript -->
-    <script src="assets/js/main.js"></script>
-    <script  src="assets/js/script.js"></script>
-
-
-    <!-- Cookie Consent JavaScript -->
-  
-
-
-
-
-<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-<script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"dark","language":"es","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_privacy_policy_url":"https://splentia.com/Politicadeprivacidad.html"});
-});
-</script>
-
-<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-
-
-
-
-
-<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	
+
+
+	<title>Programador web freelance, consultor seo, posicionamiento web y hosting</title>
+	<link rel="icon" href="https://miguelgomezsa.com/img/favicon-miguelgomez.png" type="image/x-icon">
+	<script src="https://miguelgomezsa.com/js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://miguelgomezsa.com/css/minify.css?v=1669284867" >
+
+
+</head>
+<body>
+		<header class="h-top">
+		<div class="container">
+			<div class="site-logo">
+				<a id="logo" href="https://miguelgomezsa.com/">
+					<img src="https://miguelgomezsa.com/img/miguel-gomez-programador-web-logo.svg" alt="Miguel Gómez web" width="265" height="39"/>
+				</a>
+			</div>
+			<nav>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Menú</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="https://miguelgomezsa.com/#yo"><i class="fa fa-user"></i> <span>Yo</span></a></li>
+						<li><a href="https://miguelgomezsa.com/servicios"><i class="fa fa-laptop"></i> <span>Servicios de programacion web - marketing - seo</span></a></li>
+					
+									</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+	<div class="home" id="home">
+		<header class="big-title">
+			<div class="container">
+				<div class="col-md-4">
+					<img src="https://miguelgomezsa.com/img/miguelgomez.png" alt="Miguel Gómez">
+				</div>
+				<div class="col-md-8">
+					<br><br>
+					<h2 class="big-head"><span><em>JUANJO GÓMEZ</em></span></h2>
+					<h4 class="text-sub" id="words-rotate">Programador, Consultor SEO, Desarrollador, Freelance</h4>
+					<br>
+					<h2>Creo tu proyecto desde cero y lo llevo a lo más alto</h2>
+					<br>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div class="about" id="yo">
+		<div class="extra-info">
+			<div class="container">
+				
+				<h1 style="text-align: center;">Programador web - SEO - Posicionamiento Web - Desarrollo a medida&nbsp;-&nbsp;Marketing Online - Diseño Gráfico con IA</h1>
+			</div>
+		</div>
+
+	
+
+		<div class="author-info container">
+			<article>
+				<header class="title">
+					<h2>Yo</h2>
+					<h3><span>/</span>Sobre mi</h3>
+				</header>
+				<div class="container serv">
+				
+				
+
+<p>Con su permiso me presento,&nbsp;soy&nbsp;<a title="Miguel &Aacute;ngel G&oacute;mez S&aacute;nchez" href="https://miguelgomezsa.com/seccion/miguel-gomez-programador-seo-murcia">Miguel G&oacute;mez</a>. Soy <strong>programador web </strong>y<strong> consultor&nbsp;</strong><strong>SEO</strong>. Ubicado en <strong>Murcia</strong>. Trabajo como&nbsp;<strong>desarrollador web&nbsp;freelance</strong>&nbsp;online para multitud de personas y empresas de diversas partes de Espa&ntilde;a, como <strong>Madrid</strong>, <strong>Barcelona</strong>, <strong>Valencia</strong>, <strong>Bilbao</strong>, <strong>Sevilla</strong> o <strong>M&aacute;laga</strong>. Aunque tambi&eacute;n tengo clientes en latino am&eacute;rica. Clientes con los que trabajo de forma remota. Ubicados en <strong>Suiza</strong>, <strong>Francia</strong>,&nbsp;<strong>M&eacute;xico</strong>, <strong>Argentina</strong>,<strong> Panam&aacute;</strong>,<strong> Rep&uacute;blica Dominicana</strong>&nbsp;o <strong>Chile</strong>.</p>
+<p>Me considero luchador, entusiasta, perseverante, siempre con ganas de aprender. No paro hasta que no consigo lo que quiero. Tengo la suerte de dedicarme a lo que realmente me apasiona: la&nbsp;<strong>programaci&oacute;n web</strong>, el&nbsp;<strong>desarrollo web</strong>, y el <strong>SEO</strong>. Materias que te exigen estar en constante aprendizaje.</p>
+<p><strong>Inform&aacute;tico</strong> de profesi&oacute;n, amante de las nuevas tecnolog&iacute;as. Autodidacta de nacimiento. Mi pasi&oacute;n es el <strong>desarrollo.</strong>&nbsp;Ser <strong>programador web</strong> me permite realizarme como persona, crear, ayudar a otras personas con sus proyectos y&nbsp;<strong>programar</strong> los m&iacute;os. As&iacute; me gano la vida. <strong>Programando</strong> desde <strong>p&aacute;ginas web</strong> a entornos de gesti&oacute;n a medida, tambi&eacute;n he <strong>desarrollado</strong> algunas <strong>aplicaciones para m&oacute;viles</strong>, aunque me he especializado y esta materia ya no la domino tanto.</p>
+<p>Profesional del <strong>desarrollo web</strong>. <strong>Programador web</strong> pol&iacute;glota en&nbsp;<strong>PHP, HTML, CSS, Javascript, Java</strong>... Tambi&eacute;n hablo el lenguaje de los buscadores: el&nbsp;<strong>SEO</strong>, se puede decir que <strong>Google</strong> y yo nos llevamos bien.</p>
+<p>Tengo desarrollados algunos <strong>CMS</strong> propios, tengo experiencia en&nbsp;<strong>comercio electr&oacute;nico</strong>,<strong> ecommerce</strong>. Suelo trabajar con <strong>Wordpress</strong>&nbsp;y <strong>Woocomerce</strong>, he desarrollado plugins y m&oacute;dulos para estas plataformas, as&iacute; como <strong>tiendas online</strong>,&nbsp;<strong>blogs</strong>, portfolios...</p>
+<p>Me encanta trabajar como <strong>desarrollador web</strong>&nbsp;<strong>freelance</strong>, profesi&oacute;n que me da libertad para <strong>desarrollar</strong>&nbsp;y crear a mi antojo.</p>
+<p>Mi experiencia como <strong>freelance</strong>&nbsp;me ha llevado a conocer y ayudar a personas maravillosas que quieren llevar su proyecto a cabo. Poniendo todo mi pasi&oacute;n y empe&ntilde;o en ayudarles. Ofrezco un trato cercano y personalizado.</p>
+<p>Siempre estoy embarcado en nuevos proyectos. Actualmente he creado carsharingspain.com,&nbsp; petsos.es, curseando.net, pruebasdeportivas.com y mifacturacion.es, estos son m&iacute;os propios. Aunque he creado tantos otros para clientes.</p>
+<p>Actualmente cuento con colaboradores del sector del&nbsp;<strong>desarrollado web</strong>, entre "mi equipo" cuento con personas especializadas en diversas &aacute;reas, tales como:</p>
+<ul>
+<li><strong>Dise&ntilde;o web</strong></li>
+<li><strong>Programaci&oacute;n web</strong></li>
+<li><strong>Marketing digital</strong>.</li>
+<li><strong>Redes sociales</strong></li>
+</ul>
+<p>Entre los cuales somos capaces de poner en marcha <strong>proyectos web</strong>&nbsp;con una buena relaci&oacute;n calidad / precio en un tiempo razonable.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;">Si buscas un <strong>programador web</strong> o <strong>desarrollador web</strong>&nbsp; especializado&nbsp;en <strong>posicionamiento en buscadores</strong>&nbsp;(<strong>SEO</strong>)<strong>&nbsp;</strong>cuenta conmigo.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p><em>Con pasi&oacute;n y perseverancia se puede conseguir cualquier cosa. </em></p>
+</blockquote>
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+<h1 style="text-align: center;">Programador web - SEO - Posicionamiento Web - Desarrollo a medida&nbsp;-&nbsp;Marketing Online</h1>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	<div class="services" id="servicios">
+		<article>
+			<div class="container serv">
+				<header class="title">
+					<h2><a href="https://miguelgomezsa.com/servicios">Servicios</a></h2>
+					<h3><span>/</span>Puedo ayudarte con las siguientes materias</h3>
+				</header>
+				<p style="text-align: center;">Como podr&aacute; ver puedo satisfacer gran cantidad de las necesidades de la empresa actual en lo que a nuevas tecnolog&iacute;as se refiere, y siempre a un precio razonable. Creo firmemente que hay que adaptarse a los nuevos tiempos tanto en tecnolog&iacute;a como en competitividad. Por eso ver&aacute; que mis servicios y precios se ajustan a la nueva empresa, al emprendedor a los que saben lo que quieren y como lo quieren.</p>				<ul class="serv-box row">					<li class="col-md-4 col-sm-4">
+						<div class="box box-1">
+							<span class="icon fa fa-desktop giro">&nbsp;</span>
+							<h4 class="head">Desarrollo Web</h4>
+							<p>Desarrollo web a medida</p>
+<p>Programaci&oacute;n desde cero</p>
+<p>Gestores de contenidos - CMS</p>
+<p>Wordpress, Drupal, Joomla (Plugins)</p>
+<p>Tiendas online (woocommerce, prestashop...)</p>
+<p>Dise&ntilde;o a medida, maquetaci&oacute;n</p>
+<p>Blogs</p>						</div>
+					</li>
+
+										<li class="col-md-4 col-sm-4">
+						<div class="box box-1">
+							<span class="icon fa fa-mobile giro">&nbsp;</span>
+							<h4 class="head">Aplicaciones para móviles</h4>
+							<p>Creaci&oacute;n, desarrollo y mantenimiento de aplicaci&oacute;nes m&oacute;viles multiplataforma.</p>
+<p>Android, IPhone, Firefox OS y Windows Mobile.</p>
+<p>PhoneGap, APPcelerator, Desarrollo nativo.</p>						</div>
+					</li>
+
+										<li class="col-md-4 col-sm-4">
+						<div class="box box-1">
+							<span class="icon fa fa-bar-chart-o fa fa-inverse giro">&nbsp;</span>
+							<h4 class="head">SEO y Analíticas</h4>
+							<p>Posicionamiento natural en buscadores.</p>
+<p>Adwords y Adsense.</p>
+<p>Publicidad de su web y en su web.</p>
+<p>Gane dinero con su web.</p>
+<p>M&aacute;s visitas en su web m&aacute;s dinero para usted.</p>
+<p>&nbsp;</p>						</div>
+					</li>
+
+					</ul><ul class="serv-box row">					<li class="col-md-4 col-sm-4">
+						<div class="box box-1">
+							<span class="icon fa fa-tasks giro">&nbsp;</span>
+							<h4 class="head">Administración de Sistemas</h4>
+							<p>Optimizaci&oacute;n y configuraci&oacute;n de servidores</p>
+<p>Servicios de red</p>
+<p>Mantenimiento</p>
+<p>Copias de seguridad</p>						</div>
+					</li>
+
+										<li class="col-md-4 col-sm-4">
+						<div class="box box-1">
+							<span class="icon fa fa-cloud giro">&nbsp;</span>
+							<h4 class="head">Registro de Dominios y servicio de Hosting</h4>
+							<p>&iquest;A&uacute;n no tiene presencia en Internet?</p>
+<p>Registre su dominio con el nombre de su empresa</p>
+<p>Haga que le conozcan en todo el planeta</p>						</div>
+					</li>
+
+										<li class="col-md-4 col-sm-4">
+						<div class="box box-1">
+							<span class="icon fa fa-spinner giro">&nbsp;</span>
+							<h4 class="head">Consultoría y Asesoramiento</h4>
+							<p>&iquest;Tienes un nuevo proyecto?</p>
+<p>Te puedo asesorar y guiar desde el principio hasta el final</p>
+<p>Herramientas de gesti&oacute;n de proyectos</p>
+<p>Colaboraciones y aportaciones</p>						</div>
+					</li>
+
+					</ul>			</div>
+		</article>
+	
+		<br>
+	</div>
+
+	<div class="resume" id="resumen">
+		<div class="timeline container">
+			<article>
+				<header class="title">
+					<h2>Resumen</h2>
+					<h3><span>/</span>Formación y Experiencia Profesional</h3>
+				</header>
+																			<div class="education timeline-cont clearfix"><span class="title"><strong>Educaci&oacute;n</strong></span>
+<div class="group group-1 clearfix"><span class="date">2009</span>
+<div class="desc-box ar-desc-box">
+<h4>T&eacute;cnico en Explotaci&oacute;n de Sistemas Inform&aacute;ticos</h4>
+<span class="sub-title">IES Los Albares</span></div>
+</div>
+<div class="group group-2 group-alter clearfix">
+<div class="desc-box ar-desc-box">
+<h4>T&eacute;cnico Superior en Administraci&oacute;n de Sistemas Inform&aacute;ticos en Red</h4>
+<span class="sub-title">IES Los Albares</span></div>
+<span class="date">2012</span></div>
+<div class="group group-3 clearfix"><span class="date">2012 &gt;&gt;</span>
+<div class="desc-box ar-desc-box">
+<h4>Grado en Ingenier&iacute;a Inform&aacute;tica</h4>
+<span class="sub-title">Universidad de Murcia</span></div>
+</div>
+</div>										<div class="experience timeline-cont clearfix"><span class="title"><strong>Experiencia Profesional</strong></span>
+<div class="group group-1 clearfix">
+<div class="desc-box ar-desc-box">
+<h4><a href="#" target="_blank">miguelgomezsa.com</a></h4>
+<span class="sub-title"><strong>Freelance</strong></span>
+<p>Programaci&oacute;n web, SEO, SEM, marketing...</p>
+</div>
+<span class="date">2014-Actualidad</span></div>
+<div class="group group-2 group-alter clearfix">
+<div class="desc-box ar-desc-box">
+<h4><a href="#" target="_blank">Sport Club Padel Nuestro SL</a></h4>
+<span class="sub-title"><strong>Programador</strong></span>
+<p>Departamento de desarrollo</p>
+</div>
+<span class="date">2014-2019</span></div>
+<div class="group group-3 clearfix"><span class="date">2014</span>
+<div class="desc-box ar-desc-box">
+<h4><a href="#" target="_blank">Tecomed</a></h4>
+<span class="sub-title"><strong>Programador</strong></span>
+<p>Desarrollo a medida, Wordpres, Apps. Usando para ello lenguajes como PHP, Jquery, HTML, CSS, APPcelerator...</p>
+</div>
+</div>
+<div class="group group-4 group-alter clearfix">
+<div class="desc-box ar-desc-box">
+<h4><a href="#" target="_blank">Everis</a></h4>
+<strong><span class="sub-title">Programador</span></strong>
+<p>Migraci&oacute;n de proyecto de C a Java con Spring, Hybernate...</p>
+</div>
+<span class="date">2012</span></div>
+<div class="group group-5 clearfix">
+<div class="desc-box ar-desc-box">
+<h4><a href="#" target="_blank">Futura 2000m Inform&aacute;tica</a></h4>
+<span class="sub-title"><strong>Desarrollo web</strong> y funciones de SAT.</span>
+<p>Futura 2000 M, empresa de desarrollo de software, posee su propio software de gesti&oacute;n hostelera.</p>
+</div>
+<span class="date">2009-2010</span></div>
+</div>									<div class="end-box clearfix"></div>
+			</article>
+		</div>
+	</div>
+
+	<div class="portfolio especial container" id="portfolio">
+		<hr>
+		<article>
+			<header class="title">
+				<h2>Descubre mi portfolio</h2>
+				<h3><span>/</span><a title="portfolio programador web seo" href="https://miguelgomezsa.com/portfolio-programador-web-seo">el Portfolio del programador web - SEO</a></h3>
+			</header>
+			<a title="portfolio programador web seo" href="https://miguelgomezsa.com/portfolio-programador-web-seo"><img src="https://miguelgomezsa.com/files/blog/portfolio-programador-web-seo.jpg" alt="El Portfolio del programador web - SEO"></a>
+			<br>
+			<hr>
+		</article>
+	</div>
+		<div class="especial container">
+		<article>
+			<header class="title">
+			
+			</header>
+			<p>Estas son las últimas entradas de mi <a href="https://miguelgomezsa.com/blog" title="Blog Miguel Gómez"><strong>blog</strong></a>, en él hablo de temas variados como <strong>SEO</strong>, <strong>desarrollo web</strong>, <strong>programación</strong>... también contrarás guías, técnicas, trucos, consejos y mucho más. Te invito a que eches un vistazo estoy seguro de que alguna de mis entradas te resultará muy interesante.</p>
+		</article>
+
+					<article class="post destacado col-md-4">
+				<header class="entry-header">
+					<h3 class="entry-title"><a href="https://miguelgomezsa.com/blog/x10-en-inversiones-de-5m-en-google-ads" title="X10 en inversiones de 5M en Google ADS">X10 en inversiones de 5M en Google ADS</a></h3>
+				</header>
+				<div class="entry-content">
+											<a href="https://miguelgomezsa.com/blog/x10-en-inversiones-de-5m-en-google-ads" title="X10 en inversiones de 5M en Google ADS"><img src="https://miguelgomezsa.com/image/350/files/blog/x10-en-inversiones-de-5m-en-google-ads.jpg" alt="X10 en inversiones de 5M en Google ADS" width="350"></a>
+					<p>&nbsp;</p>
+<p style="text-align: justify;">En la era digital, la publicidad en l&iacute;nea se ha convertido en una herramienta esencial para las empresas que desean aumentar su visibilidad y alcanzar a su p&uacute;blico objetivo de manera efectiva. Entre las diversas plataformas publicitarias disponibles, <strong>Google Ads</strong> se destaca como una de las m&aacute;s populares y efectivas.</p>
+<p style="text-align: justify;"></p>
+				</div>
+			</article>
+						<article class="post destacado col-md-4">
+				<header class="entry-header">
+					<h3 class="entry-title"><a href="https://miguelgomezsa.com/blog/hosting-alto-rendimiento" title="Hosting de Alto Rendimiento: La Base Esencial para tener éxito">Hosting de Alto Rendimiento: La Base Esencial para tener éxito</a></h3>
+				</header>
+				<div class="entry-content">
+											<a href="https://miguelgomezsa.com/blog/hosting-alto-rendimiento" title="Hosting de Alto Rendimiento: La Base Esencial para tener éxito"><img src="https://miguelgomezsa.com/image/350/files/blog/La-Base-Esencial-para-tener-exito.png" alt="Hosting de Alto Rendimiento: La Base Esencial para tener éxito" width="350"></a>
+					<p>&nbsp;</p>
+<p style="text-align: justify;">En el competitivo mundo digital, la velocidad y confiabilidad de un sitio web son cruciales para el &eacute;xito en l&iacute;nea. Un elemento fundamental para lograr esto es un <strong>hosting de alto rendimiento</strong>.</p>
+<p>&nbsp;</p>
+<p></p>
+				</div>
+			</article>
+						<article class="post destacado col-md-4">
+				<header class="entry-header">
+					<h3 class="entry-title"><a href="https://miguelgomezsa.com/blog/como-establecer-una-marca-digital" title="Cómo establecer una marca digital">Cómo establecer una marca digital</a></h3>
+				</header>
+				<div class="entry-content">
+											<a href="https://miguelgomezsa.com/blog/como-establecer-una-marca-digital" title="Cómo establecer una marca digital"><img src="https://miguelgomezsa.com/image/350/files/blog/como-establecer-una-marca-digital.png" alt="Cómo establecer una marca digital" width="350"></a>
+					<p>&nbsp;</p>
+<p style="text-align: justify;">La tecnolog&iacute;a es una aliada en este nuevo mundo en el que diariamente se transforman los conocimientos. Este recurso es una de las creaciones del ser humano m&aacute;s potente, vers&aacute;til y significativa, a trav&eacute;s de la cual se pueden cambiar una variedad de elementos de la realidad cercana.&nbsp;</p>
+<p>&nbsp;</p>
+<p></p>
+				</div>
+			</article>
+				<br>
+
+	<br>
+	<hr>
+
+	<hr>
+
+	<hr>
+	<br>
+</div>
+<hr>
+<hr>
+<div class="contact" id="contacto">
+	<div class="container">
+		<div class="title">
+			<h2>Contacto</h2>
+			<h3><span>/</span>Estaré encantado de poder ayudarle con su proyecto - enviame email a : </h3>
+			<hr>
+			<div style="text-align:center"><b><h3>futuretechjuanjo@gmail.com</h3></b></div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="contact" id="suscribirse">
+
+</div><footer id="footer" class="page-foot clearfix">
+	<div class="container">
+		<p>Especialista en<strong> dise&ntilde;o web</strong>, <strong><a title="desarrollo Web" href=>desarrollo web</a></strong>&nbsp;y&nbsp;<strong><a title="SEO" href=>SEO</a></strong></p>
+<p>Te ayudo con la contrataci&oacute;n de <strong><a href=>hosting</a></strong> y dominio de forma gratuita. Cont&aacute;ctame.</p>
+<h3>Porque ser <strong><a title="Programador web" href=>programador web</a></strong>&nbsp;es mi pasi&oacute;n</h3>
+<p>&nbsp;</p>
+<p><a href="https://miguelgomezsa.com/seccion/aviso-legal">Aviso legal</a>&nbsp;- <a href="https://miguelgomezsa.com/seccion/politica-de-cookies">Pol&iacute;tica de Cookies</a></p>
+<p>&nbsp;</p>		
+		</ul>
+	</div>
+</footer>
+
+<script src="https://miguelgomezsa.com/js/minify.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+<link href='https://miguelgomezsa.com/css/font.css' rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+
+
+</body>
 </html>
